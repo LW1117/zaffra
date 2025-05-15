@@ -1,0 +1,331 @@
+/* style.css - Mobile-First with Custom Color Palette */
+/* Base Reset & Mobile Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: #FCEFCB; /* Light cream background */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Hero Section - Mobile First */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #FAD59A, #FCEFCB);
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/* Video Content - Mobile */
+.hero-content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333; /* Dark text for contrast */
+    min-height: 50vh;
+    padding: 1rem;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* z-index: -1; */
+    opacity: 0.9;
+}
+
+.hero-overlay {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(252, 239, 203, 0.85); /* Semi-transparent cream */
+    border-radius: 8px;
+    width: 95%;
+    max-width: 400px;
+    backdrop-filter: blur(5px);
+    border: 2px solid #E9A319; /* Gold border */
+    box-shadow: 0 4px 15px rgba(168, 101, 35, 0.2);
+}
+
+.hero-overlay h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: #A86523; /* Dark brown */
+    line-height: 1.2;
+    text-shadow: 1px 1px 2px rgba(233, 163, 25, 0.3);
+}
+
+.hero-overlay p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #5a4a30;
+}
+
+/* Carousel - Mobile */
+.carousel-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to bottom, #A86523, #E9A319); /* Brown to gold gradient */
+    min-height: 40vh;
+    padding: 1rem 0;
+}
+
+.carousel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(252, 239, 203, 0.9); /* Cream background */
+    color: #A86523; /* Brown text */
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(168, 101, 35, 0.3);
+}
+
+.carousel-btn:hover {
+    background: #FCEFCB; /* Solid cream */
+    color: #E9A319; /* Gold */
+}
+
+.prev-btn {
+    left: 8px;
+}
+
+.next-btn {
+    right: 8px;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    touch-action: pan-y;
+}
+
+.carousel-track {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    user-select: none;
+    border: 3px solid #FAD59A; /* Light gold border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-slide img:hover {
+    transform: scale(1.02);
+    border-color: #E9A319; /* Gold on hover */
+}
+
+/* Buttons - Mobile */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.3rem;
+    background-color: #E9A319; /* Gold */
+    color: #333;
+    text-decoration: none;
+    border-radius: 25px; /* Rounded shape */
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    max-width: 100%;
+    box-shadow: 0 3px 6px rgba(168, 101, 35, 0.3);
+}
+
+.btn:hover {
+    background-color: #A86523; /* Dark brown */
+    color: #FCEFCB; /* Light cream */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(168, 101, 35, 0.4);
+}
+
+.whatsapp-btn {
+    background-color: #25D366; /* Keeping WhatsApp green */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1da851;
+    color: white;
+}
+
+/* Swipe Indicators for Mobile */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 8px;
+}
+
+.carousel-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(252, 239, 203, 0.5); /* Light cream */
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background: #FCEFCB; /* Solid cream */
+    transform: scale(1.3);
+}
+
+/* Tablet Styles (600px and up) */
+@media (min-width: 600px) {
+    .hero-overlay h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1.1rem;
+    }
+
+    .carousel-slide {
+        padding: 0 15px;
+    }
+    
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Desktop Styles (1024px and up) */
+@media (min-width: 1024px) {
+    .hero-section {
+        flex-direction: row;
+        height: 100vh;
+        background: linear-gradient(to right, #FAD59A, #FCEFCB);
+    }
+
+    .hero-content {
+        min-height: 100%;
+        padding: 2rem;
+    }
+
+    .carousel-container {
+        min-height: 100%;
+        background: linear-gradient(to right, #E9A319, #A86523);
+    }
+
+    .hero-overlay {
+        padding: 2rem;
+        max-width: 500px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1.3rem;
+    }
+
+    .carousel-slide img {
+        max-height: 90%;
+    }
+    
+    .carousel-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Large Desktop Styles (1200px and up) */
+@media (min-width: 1200px) {
+    .hero-overlay h1 {
+        font-size: 3rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1.5rem;
+    }
+    
+    .hero-overlay {
+        max-width: 600px;
+        padding: 2.5rem;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    .carousel-track {
+        transition: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+}
+
+/* Color Palette Variables (for easy reference) */
+:root {
+    --dark-brown: #A86523;
+    --gold: #E9A319;
+    --light-gold: #FAD59A;
+    --cream: #FCEFCB;
+}
