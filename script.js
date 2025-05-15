@@ -14,7 +14,7 @@ const moveToNextSlide = () => {
     if (currentSlideIndex < slides.length - 1) {
         currentSlideIndex++;
     } else {
-        currentSlideIndex = 0; // Loop back to the first slide
+        currentSlideIndex = 0;
     }
     updateCarousel();
 };
@@ -23,7 +23,7 @@ const moveToPrevSlide = () => {
     if (currentSlideIndex > 0) {
         currentSlideIndex--;
     } else {
-        currentSlideIndex = slides.length - 1; // Loop back to the last slide
+        currentSlideIndex = slides.length - 1;
     }
     updateCarousel();
 };
@@ -31,14 +31,11 @@ const moveToPrevSlide = () => {
 nextButton.addEventListener('click', moveToNextSlide);
 prevButton.addEventListener('click', moveToPrevSlide);
 
-// Initialize carousel
 updateCarousel();
 
-// Auto-loop the carousel
-const autoLoopInterval = 3000; // Time in milliseconds (3 seconds)
+const autoLoopInterval = 3000;
 let autoLoop = setInterval(moveToNextSlide, autoLoopInterval);
 
-// Pause auto-loop on button hover
 [nextButton, prevButton].forEach(button => {
     button.addEventListener('mouseenter', () => clearInterval(autoLoop));
     button.addEventListener('mouseleave', () => {

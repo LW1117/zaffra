@@ -1,5 +1,3 @@
-/* style.css - Mobile-First with Custom Color Palette */
-/* Base Reset & Mobile Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,13 +7,12 @@
 }
 
 body {
-    background-color: #FCEFCB; /* Light cream background */
+    background-color: #FCEFCB;
     color: #333;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Hero Section - Mobile First */
 .hero-section {
     position: relative;
     width: 100%;
@@ -32,14 +29,13 @@ body {
     height: 100%;
 }
 
-/* Video Content - Mobile */
 .hero-content {
     position: relative;
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #333; /* Dark text for contrast */
+    color: #333;
     min-height: 50vh;
     padding: 1rem;
 }
@@ -51,26 +47,26 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* z-index: -1; */
+
     opacity: 0.9;
 }
 
 .hero-overlay {
     text-align: center;
     padding: 1.5rem;
-    background-color: rgba(252, 239, 203, 0.85); /* Semi-transparent cream */
+    background-color: rgba(252, 239, 203, 0.85);
     border-radius: 8px;
     width: 95%;
     max-width: 400px;
     backdrop-filter: blur(5px);
-    border: 2px solid #E9A319; /* Gold border */
+    border: 2px solid #E9A319;
     box-shadow: 0 4px 15px rgba(168, 101, 35, 0.2);
 }
 
 .hero-overlay h1 {
     font-size: 1.8rem;
     margin-bottom: 0.8rem;
-    color: #A86523; /* Dark brown */
+    color: #A86523;
     line-height: 1.2;
     text-shadow: 1px 1px 2px rgba(233, 163, 25, 0.3);
 }
@@ -81,13 +77,13 @@ body {
     color: #5a4a30;
 }
 
-/* Carousel - Mobile */
+
 .carousel-container {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(to bottom, #A86523, #E9A319); /* Brown to gold gradient */
+    background: linear-gradient(to bottom, #A86523, #E9A319);
     min-height: 40vh;
     padding: 1rem 0;
 }
@@ -104,8 +100,8 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(252, 239, 203, 0.9); /* Cream background */
-    color: #A86523; /* Brown text */
+    background: rgba(252, 239, 203, 0.9);
+    color: #A86523;
     border: none;
     width: 36px;
     height: 36px;
@@ -121,8 +117,8 @@ body {
 }
 
 .carousel-btn:hover {
-    background: #FCEFCB; /* Solid cream */
-    color: #E9A319; /* Gold */
+    background: #FCEFCB;
+    color: #E9A319;
 }
 
 .prev-btn {
@@ -164,23 +160,22 @@ body {
     border-radius: 8px;
     transition: transform 0.3s ease;
     user-select: none;
-    border: 3px solid #FAD59A; /* Light gold border */
+    border: 3px solid #FAD59A;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .carousel-slide img:hover {
     transform: scale(1.02);
-    border-color: #E9A319; /* Gold on hover */
+    border-color: #E9A319;
 }
 
-/* Buttons - Mobile */
 .btn {
     display: inline-block;
     padding: 0.7rem 1.3rem;
-    background-color: #E9A319; /* Gold */
+    background-color: #E9A319;
     color: #333;
     text-decoration: none;
-    border-radius: 25px; /* Rounded shape */
+    border-radius: 25px;
     font-weight: bold;
     font-size: 0.95rem;
     transition: all 0.2s ease;
@@ -192,14 +187,14 @@ body {
 }
 
 .btn:hover {
-    background-color: #A86523; /* Dark brown */
-    color: #FCEFCB; /* Light cream */
+    background-color: #A86523;
+    color: #FCEFCB;
     transform: translateY(-2px);
     box-shadow: 0 5px 12px rgba(168, 101, 35, 0.4);
 }
 
 .whatsapp-btn {
-    background-color: #25D366; /* Keeping WhatsApp green */
+    background-color: #25D366;
     color: white;
     display: flex;
     align-items: center;
@@ -212,7 +207,7 @@ body {
     color: white;
 }
 
-/* Swipe Indicators for Mobile */
+
 .carousel-indicators {
     display: flex;
     justify-content: center;
@@ -224,16 +219,15 @@ body {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: rgba(252, 239, 203, 0.5); /* Light cream */
+    background: rgba(252, 239, 203, 0.5);
     transition: all 0.3s ease;
 }
 
 .carousel-indicator.active {
-    background: #FCEFCB; /* Solid cream */
+    background: #FCEFCB;
     transform: scale(1.3);
 }
 
-/* Tablet Styles (600px and up) */
 @media (min-width: 600px) {
     .hero-overlay h1 {
         font-size: 2.2rem;
@@ -246,14 +240,13 @@ body {
     .carousel-slide {
         padding: 0 15px;
     }
-    
+
     .btn {
         padding: 0.8rem 1.5rem;
         font-size: 1rem;
     }
 }
 
-/* Desktop Styles (1024px and up) */
 @media (min-width: 1024px) {
     .hero-section {
         flex-direction: row;
@@ -287,7 +280,7 @@ body {
     .carousel-slide img {
         max-height: 90%;
     }
-    
+
     .carousel-btn {
         width: 42px;
         height: 42px;
@@ -295,7 +288,6 @@ body {
     }
 }
 
-/* Large Desktop Styles (1200px and up) */
 @media (min-width: 1200px) {
     .hero-overlay h1 {
         font-size: 3rem;
@@ -304,25 +296,23 @@ body {
     .hero-overlay p {
         font-size: 1.5rem;
     }
-    
+
     .hero-overlay {
         max-width: 600px;
         padding: 2.5rem;
     }
 }
 
-/* Accessibility Improvements */
 @media (prefers-reduced-motion: reduce) {
     .carousel-track {
         transition: none;
     }
-    
+
     .btn:hover {
         transform: none;
     }
 }
 
-/* Color Palette Variables (for easy reference) */
 :root {
     --dark-brown: #A86523;
     --gold: #E9A319;
